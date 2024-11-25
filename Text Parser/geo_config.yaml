@@ -1,0 +1,25 @@
+data_root: 'dataset_text'
+ckpt_name: 't5-base'
+checkpoint: 'checkpoint/BEST_checkpoint_t5-base.pth.tar'
+level: 'leveldict/t5-base.json'
+generate: 'generate/t5-base.json'
+# set pretrained as a file path or an url
+
+path2token: 'T5/t5-base'
+path2model: 'T5/t5-base'
+
+tar_vocab_size: 471
+sou_maxlen: 270
+tar_maxlen: 225
+
+batch_size: 8
+init_lr: 1e-3
+min_lr: 1e-4
+num_beams: 5
+repetition_penalty: 2.0
+
+# optimizer
+weight_decay: 0.05
+
+max_epoch: 30
+
