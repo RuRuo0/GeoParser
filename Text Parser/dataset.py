@@ -20,7 +20,7 @@ class GeoDataset(Dataset):
         self.config = config
         self.split = split
         self.tokenizer_sou = T5Tokenizer.from_pretrained(config['path2token'])
-        self.tokenizer_tar = Tokenizer.from_file("vocab_tar_pre.json")
+        self.tokenizer_tar = Tokenizer.from_file("vocab_tar.json")
         self.vocab_tar = self.tokenizer_tar.get_vocab()
         self.ids, self.sources, self.targets = self.load_data()
 

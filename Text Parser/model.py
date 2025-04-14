@@ -16,7 +16,7 @@ class seq2seqModel(nn.Module):
 
         self.model.lm_head = nn.Linear(self.model.lm_head.in_features, config['tar_vocab_size'], bias=False)
 
-        self.tokenizer_tar = Tokenizer.from_file("vocab_tar_pre.json")
+        self.tokenizer_tar = Tokenizer.from_file("vocab_tar.json")
         self.vocab = self.tokenizer_tar.get_vocab()
 
     def forward(self, src_vec, src_mask, tar_vec, tar_mask):
